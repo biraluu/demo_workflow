@@ -1,13 +1,7 @@
 name: Build and Publish image
 on:
-  push:
-    branches:
-      - dev
-      - main
-      - qa
-      - stage
-
-    tags: ["v*.*.*"]
+  release:
+    types: [published]
 
 env:
   CONTEXT_PATH: .
