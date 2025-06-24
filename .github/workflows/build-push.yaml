@@ -38,7 +38,8 @@ jobs:
           images: |
             biraluu/${{ env.DOCKER_REPO }}
           tags: |
-            type=semver,pattern={{version}} 
+            type=semver,pattern={{version}}
+            type=raw,value=latest
           flavor: |
             latest=false
       - name: Build and push
