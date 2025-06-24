@@ -38,10 +38,9 @@ jobs:
           images: |
             biraluu/${{ env.DOCKER_REPO }}
           tags: |
-            type=raw,value={{branch}}-sha-{{sha}},enable=${{ !startsWith(github.ref, 'refs/tags/v') }}
             type=semver, pattern= {{version}} 
           flavor: |
-            latest=true
+            latest=flase
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
